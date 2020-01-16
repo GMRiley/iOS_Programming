@@ -10,12 +10,14 @@ print("How to use playgrounds to make writing Swift fun and simple")
 /*:
  Now print your own phrases to the console. Pick one of your favorite songs. Use your knowledge of the `print` function to display the song title and artist.
  */
-
+print("Novelists - Eyes Wide Shut")
 
 /*:
  Use multiple `print` functions to write out some of the lyrics to the song.
  */
-
+print("Tame our addictions")
+print("Keep us accustomed to this constant need of becoming someone")
+print("Feed our ego and make us self-centered suns of a selfish world")
 
 
 /*:
