@@ -22,12 +22,15 @@ print(dict)
  */
 var total: Double = 0
 for (_,value) in dict{
-    total += ((type(of: value) == String.self) ? 1.0 : (type(of: value) == Bool.self) ? 2.0 : value as! Double.Typ)
+    total += ((type(of: value) == String.self) ? 1.0 : (type(of: value) == Bool.self) ? 2.0 : Double(value as! Double))
 }
 print(total)
 /*:
  Create a variable `total2` of type `Double` set to 0. Loop through the collection again, adding up all the integers and doubles. For each string that you come across during the loop, attempt to convert the string into a number, and add that value to the total. Ignore booleans. Print the total.
  */
-
-
+var total2: Double = 0
+for (_,value) in dict{
+    total2 += ((type(of: value) == String.self) ? Double(value as! Double) : Double(value as! Double))
+}
+print(total2)
 //: page 1 of 2  |  [Next: App Exercise - Workout Types](@next)
