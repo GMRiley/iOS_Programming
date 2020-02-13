@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B8264D0A23F4DA3E00E9F4D8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8264D0923F4DA3E00E9F4D8 /* MapViewController.swift */; };
+		B8264D0C23F4EEBE00E9F4D8 /* WebkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8264D0B23F4EEBE00E9F4D8 /* WebkitViewController.swift */; };
 		B8628D1623EB8CB500B8978C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8628D1523EB8CB500B8978C /* AppDelegate.swift */; };
 		B8628D1823EB8CB500B8978C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8628D1723EB8CB500B8978C /* SceneDelegate.swift */; };
 		B8628D1A23EB8CB500B8978C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8628D1923EB8CB500B8978C /* ViewController.swift */; };
@@ -35,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B8264D0923F4DA3E00E9F4D8 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		B8264D0B23F4EEBE00E9F4D8 /* WebkitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebkitViewController.swift; sourceTree = "<group>"; };
 		B8628D1223EB8CB500B8978C /* WorldTrotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WorldTrotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8628D1523EB8CB500B8978C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B8628D1723EB8CB500B8978C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,8 @@
 				B8628D1E23EB8CB600B8978C /* Assets.xcassets */,
 				B8628D2023EB8CB600B8978C /* LaunchScreen.storyboard */,
 				B8628D2323EB8CB600B8978C /* Info.plist */,
+				B8264D0923F4DA3E00E9F4D8 /* MapViewController.swift */,
+				B8264D0B23F4EEBE00E9F4D8 /* WebkitViewController.swift */,
 			);
 			path = WorldTrotter;
 			sourceTree = "<group>";
@@ -261,7 +267,9 @@
 			files = (
 				B8628D1A23EB8CB500B8978C /* ViewController.swift in Sources */,
 				B8628D1623EB8CB500B8978C /* AppDelegate.swift in Sources */,
+				B8264D0C23F4EEBE00E9F4D8 /* WebkitViewController.swift in Sources */,
 				B8628D1823EB8CB500B8978C /* SceneDelegate.swift in Sources */,
+				B8264D0A23F4DA3E00E9F4D8 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
