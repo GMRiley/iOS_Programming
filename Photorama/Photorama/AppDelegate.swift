@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Homepwner
+//  Photorama
 //
-//  Created by Riley, Kyle M on 2/19/20.
+//  Created by Riley, Kyle M on 3/11/20.
 //  Copyright © 2020 Riley, Kyle M. All rights reserved.
 //
 
@@ -12,10 +12,8 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-    let itemStore = ItemStore()
-    
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         // Override point for customization after application launch.
         return true
     }

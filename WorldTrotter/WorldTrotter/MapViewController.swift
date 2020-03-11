@@ -32,6 +32,8 @@ class MapViewController: UIViewController {
         let trailingConstraint =
          segmentedControl.trailingAnchor.constraint(equalTo: margins.trailingAnchor)
         
+        
+        
         topConstraint.isActive = true
         leadingConstraint.isActive = true
         trailingConstraint.isActive = true

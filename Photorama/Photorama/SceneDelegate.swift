@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Homepwner
+//  Photorama
 //
-//  Created by Riley, Kyle M on 2/19/20.
+//  Created by Riley, Kyle M on 3/11/20.
 //  Copyright © 2020 Riley, Kyle M. All rights reserved.
 //
 
@@ -11,19 +11,17 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    let itemStore = ItemStore()
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        
+        let rootViewController = window?.rootViewController as! UINavigationController
+        let photosViewController = rootViewController.topViewController as! PhotosViewController
+        
+        photosViewController.store = PhotoStore()
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        let imageStore = ImageStore()
-        let navController = window?.rootViewController as! UINavigationController
-        let itemsController = navController.topViewController as! ItemsViewController
-        
-        itemsController.itemStore = itemStore
-        itemsController.imageStore = imageStore
         guard let _ = (scene as? UIWindowScene) else { return }
     }
 

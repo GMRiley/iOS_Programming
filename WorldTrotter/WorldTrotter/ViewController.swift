@@ -29,6 +29,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return false
         }
     }
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+           
+            let currentHour = Calendar.current.component(.hour, from: Date())
+            if currentHour < 7 || currentHour > 19 {
+                view.backgroundColor = .black
+                celsiusLabel.textColor = .white
+                textField.backgroundColor = .black
+               
+            } else {
+                view.backgroundColor = .white
+            }
+        }
     
     var fahrenheitValue: Measurement<UnitTemperature>? {
         didSet {
