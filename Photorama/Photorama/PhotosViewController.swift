@@ -21,8 +21,20 @@ class PhotosViewController: UIViewController, UICollectionViewDelegate {
         collectionView.dataSource = photoDataSource
         collectionView.delegate = self
         
-        store.fetchInterestingPhotos { (photosResult) in
-            self.updateDataSource()
+        collectionView.collectionViewLayout = FlipbookFlowLayout()
+        
+        store.fetchInterestingPhotos {
+            (photosResult) -> Void in
+            
+            switch photosResult {
+            case let .success(photos):
+                print("Successfully found \(photos.count) photos.")
+                self.photoDataSource.photos = photos
+            case let .failure(error):
+                print("Error fetching recent photos: \(error)")
+                self.photoDataSource.photos.removeAll()
+            }
+            self.collectionView.reloadSections(IndexSet(integer: 0))
         }
     }
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {

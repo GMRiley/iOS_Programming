@@ -23,11 +23,6 @@ enum PhotosResult {
     case failure(Error)
 }
 
-enum TagResult {
-    case success([Tag])
-    case failure(Error)
-}       
-
 class PhotoStore {
     
     let imageStore = ImageStore()
@@ -129,7 +124,7 @@ class PhotoStore {
             preconditionFailure("Photo expected to have a remote URL.")
         }
         
-        let request = URLRequest(url: photoURL as URL)
+        let request = URLRequest(url: photoURL as! URL)
         
         let task = session.dataTask(with: request) { (data, response, error) in
             if let response = response as? HTTPURLResponse {
@@ -169,24 +164,6 @@ class PhotoStore {
             }
         }
     }
-    
-    func fetchAllTags(completion: @escaping (TagResult) -> Void) {
-        let fetchRequest: NSFetchRequest<Tag> = Tag.fetchRequest()
-        let sortByName = NSSortDescriptor(key: "\(#keyPath(Tag.name))", ascending: true)
-        fetchRequest.sortDescriptors = [sortByName]
-        
-        let viewContext = persistentContainer.viewContext
-        
-        viewContext.perform {
-            do {
-                let allTags = try fetchRequest.execute()
-                completion(.success(allTags))
-            } catch {
-                completion(.failure(error))
-            }
-        }
-    }
-    
     
     func saveIfNeeded() {
         let context = persistentContainer.viewContext

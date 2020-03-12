@@ -93,29 +93,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gDZ-Ye-CNg">
-                                <rect key="frame" x="0.0" y="813" width="414" height="49"/>
-                                <items>
-                                    <barButtonItem title="Tags" id="l6F-lF-rEG">
-                                        <connections>
-                                            <segue destination="Uma-lk-cWt" kind="presentation" identifier="showTags" id="Y7q-ga-wLS"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="gDZ-Ye-CNg" firstAttribute="leading" secondItem="vyv-dZ-ZEB" secondAttribute="leading" id="50h-Qf-eFD"/>
-                            <constraint firstItem="gDZ-Ye-CNg" firstAttribute="bottom" secondItem="vyv-dZ-ZEB" secondAttribute="bottom" id="5UK-Pf-n4g"/>
                             <constraint firstItem="Dks-c0-dd1" firstAttribute="top" secondItem="vyv-dZ-ZEB" secondAttribute="top" constant="16" id="OtR-Nf-9Jn"/>
                             <constraint firstItem="Xes-XO-hDD" firstAttribute="leading" secondItem="vyv-dZ-ZEB" secondAttribute="leading" id="WYU-pb-y4q"/>
-                            <constraint firstItem="gDZ-Ye-CNg" firstAttribute="trailing" secondItem="vyv-dZ-ZEB" secondAttribute="trailing" id="XdB-xn-T9w"/>
                             <constraint firstItem="Xes-XO-hDD" firstAttribute="trailing" secondItem="vyv-dZ-ZEB" secondAttribute="trailing" id="ddS-ED-E4Q"/>
                             <constraint firstItem="Xes-XO-hDD" firstAttribute="top" secondItem="vyv-dZ-ZEB" secondAttribute="top" id="g4q-Vy-LDJ"/>
                             <constraint firstItem="Dks-c0-dd1" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vyv-dZ-ZEB" secondAttribute="leading" symbolic="YES" id="lHV-TH-eEz"/>
+                            <constraint firstItem="vyv-dZ-ZEB" firstAttribute="bottom" secondItem="Xes-XO-hDD" secondAttribute="bottom" constant="49" id="nsX-io-lii"/>
                             <constraint firstItem="vyv-dZ-ZEB" firstAttribute="trailing" secondItem="Dks-c0-dd1" secondAttribute="trailing" constant="16" id="oDr-9B-MuT"/>
-                            <constraint firstItem="Xes-XO-hDD" firstAttribute="bottom" secondItem="gDZ-Ye-CNg" secondAttribute="top" id="oJ7-Qb-GiN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vyv-dZ-ZEB"/>
                     </view>
@@ -128,71 +115,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cH8-CO-w89" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1669.5999999999999" y="-565.36731634182911"/>
-        </scene>
-        <!--Tags-->
-        <scene sceneID="Pda-4V-m8g">
-            <objects>
-                <tableViewController id="4wW-Vm-eyZ" customClass="TagsViewController" customModule="Photorama" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="zrC-lu-dfW">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="NRb-rT-2JP" style="IBUITableViewCellStyleDefault" id="E2m-90-ngc">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="E2m-90-ngc" id="r1s-tN-nOn">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="NRb-rT-2JP">
-                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="4wW-Vm-eyZ" id="hxu-7p-pRD"/>
-                            <outlet property="delegate" destination="4wW-Vm-eyZ" id="tw8-Aj-ek2"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Tags" id="66Q-x3-jQU">
-                        <barButtonItem key="leftBarButtonItem" systemItem="done" id="9FE-p5-EcG">
-                            <connections>
-                                <action selector="done:" destination="4wW-Vm-eyZ" id="Tyj-oj-B57"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="CLH-wg-6qC">
-                            <connections>
-                                <action selector="addNewTag:" destination="4wW-Vm-eyZ" id="BVh-Hn-BZc"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Y5J-2b-fvr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3482" y="-564"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="o74-X2-ec4">
-            <objects>
-                <navigationController id="Uma-lk-cWt" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="qhK-zg-gOx">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="4wW-Vm-eyZ" kind="relationship" relationship="rootViewController" id="9z8-B0-Z5o"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uz8-GH-lkZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2530" y="-564"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0tf-Q1-Bmr">
